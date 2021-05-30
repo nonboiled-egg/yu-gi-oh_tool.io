@@ -4,4 +4,7 @@
   <title>test page</title>
 </head>
 
-<body></body>
+<body>
+
+<?php echo "My first PHP script!"; ?>
+</body>
