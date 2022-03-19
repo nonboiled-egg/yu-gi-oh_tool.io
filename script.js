@@ -1,3 +1,7 @@
+prev_deck_count = 0;
+prev_target_count = 0;
+prev_hand_count = 0;
+
 $(function() {
   // initializing
   adjust_max();
@@ -9,7 +13,7 @@ $(function() {
     adjust_max();
   });
   
-  $("#target_card_count").change(function(){
+  $("#target_count").change(function(){
     calculate(); 
   });
   
@@ -18,10 +22,44 @@ $(function() {
   });
 });
 
+function is_out_of_bound(element){
+    var min = element.attr("min");
+    var max = element.attr("max");
+    var val = element.val();
+    
+    console.log("x < " + max);
+    console.log("x = " + val);
+    console.log(max < val);
+   
+    return val < min || max < val;
+}
+
 function calculate(){
   var deck_count = $("#deck_count").val();
-  var target_count = $("#target_card_count").val();
+  var target_count = $("#target_count").val();
   var hand_count = $("#hand_count").val();
+  
+  if(is_out_of_bound($("#deck_count"))){
+    $("#deck_count").val(prev_deck_count);
+    alert("deck out of range");
+    return;
+  }
+  
+  if(is_out_of_bound($("#target_count"))){
+    $("#target_count").val(prev_target_count);
+    alert("target out of range");
+    return;
+  }
+  
+  if(is_out_of_bound($("#hand_count"))){
+    $("#hand_count").val(prev_hand_count);
+    alert("hand out of range");
+    return;
+  }
+  
+  prev_deck_count = deck_count;
+  prev_target_count = target_count;
+  prev_hand_count = hand_count;
   
   var result = 0;
   
@@ -47,7 +85,7 @@ function calculate(){
 }
 
 function adjust_max(){
-  $("#target_card_count").attr({
+  $("#target_count").attr({
     "max" : $("#deck_count").val()  
   });
   

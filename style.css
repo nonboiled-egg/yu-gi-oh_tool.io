@@ -6,3 +6,20 @@ table{
 td{
     border: solid black 1px;
 }
+
+@media (min-width:320px)  {
+    table{width: 100%;}
+}
+@media (min-width:481px)  {
+    table{width: 100%;}
+}
+@media (min-width:641px)  {
+    table{width: 100%;}
+}
+@media (min-width:961px)  {
+    table{width: 100%;}
+}
+@media (min-width:1025px) {
+    table{width: 100%;}
+}
+@media (min-width:1281px) {}
