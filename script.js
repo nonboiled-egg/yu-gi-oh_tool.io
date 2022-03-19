@@ -41,9 +41,9 @@ $(function() {
 });
 
 function is_out_of_bound(element){
-    var min = element.attr("min");
-    var max = element.attr("max");
-    var val = element.val();
+    var min = parseInt(element.attr("min"));
+    var max = parseInt(element.attr("max"));
+    var val = parseInt(element.val());
     
     console.log("x < " + max);
     console.log("x = " + val);
