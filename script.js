@@ -4,24 +4,6 @@ prev_hand_count = 0;
 
 $(function() {
   // initializing
-   $("#target_count").attr({
-    "value" : 1,
-    "min" : 1,
-    "max" : 40
-  });
-  
-  $("#hand_count").attr({
-    "value" : 5,
-    "min" : 1,
-    "max" : 40
-  });
-  
-  $("#deck_count").attr({
-    "value" : 40,
-    "min" : 40,
-    "max" : 60
-  });
-  
   adjust_max();
   calculate();
   
