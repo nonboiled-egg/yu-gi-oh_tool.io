@@ -13,10 +13,7 @@
 <body>
   <table>
     <tbody>
-      <tr>
-        <th>デッキ</th>
-        <td><input id='deck_count' type='number' inputmode="numeric" pattern="[0-9]*" min='40' max='60' value='40'/></td>
-      </tr>
+      
       <tr>
         <th>初動札</th>
         <td><input id='target_count' type='number' inputmode="numeric" pattern="[0-9]*" min='1' value='1'/></td>
@@ -24,7 +21,12 @@
       
       <tr>
         <th>手札</th>
-        <td><input id='hand_count' type='number' inputmode="numeric" pattern="[0-9]*" min='5' value='5'/></td>
+        <td><input id='hand_count' type='number' inputmode="numeric" pattern="[0-9]*" min='1' value='5'/></td>
+      </tr>
+      
+      <tr>
+        <th>デッキ</th>
+        <td><input id='deck_count' type='number' inputmode="numeric" pattern="[0-9]*" min='40' max='60' value='40'/></td>
       </tr>
       
       <tr>
@@ -33,4 +35,6 @@
       </tr>
     </tbody>
   </table>
+  <button id='yugioh'>Yu-Gi-Oh</button>
+  <button id='pokemon'>Pokémon</button>
 </body>
