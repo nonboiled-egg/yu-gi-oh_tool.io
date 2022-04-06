@@ -14,21 +14,21 @@
   <table>
     <tbody>
       <tr>
-        <td>デッキ</td>
-        <td><input id='deck_count' type='number' min='40' max='60'/></td>
+        <th>デッキ</th>
+        <td><input id='deck_count' type='number' inputmode="numeric" pattern="[0-9]*" min='40' max='60' value='40'/></td>
       </tr>
       <tr>
-        <td>初動札</td>
-        <td><input id='target_count' type='number' min='1' /></td>
-      </tr>
-      
-      <tr>
-        <td>手札</td>
-        <td><input id='hand_count' type='number' min='5' /></td>
+        <th>初動札</th>
+        <td><input id='target_count' type='number' inputmode="numeric" pattern="[0-9]*" min='1' value='1'/></td>
       </tr>
       
       <tr>
-        <td>事故率</td>
+        <th>手札</th>
+        <td><input id='hand_count' type='number' inputmode="numeric" pattern="[0-9]*" min='5' value='5'/></td>
+      </tr>
+      
+      <tr>
+        <th>事故率</th>
         <td><output id='result' /></td>
       </tr>
     </tbody>

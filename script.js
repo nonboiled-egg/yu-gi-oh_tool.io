@@ -4,9 +4,9 @@ prev_hand_count = 0;
 
 $(function() {
   // initializing
-  $("#deck_count").val(40);
-  $("#target_count").val(1);
-  $("#hand_count").val(5);
+  $("#deck_count").focus();
+  //$("#target_count").val(1);
+  //$("#hand_count").val(5);
   adjust_max();
   calculate();
   

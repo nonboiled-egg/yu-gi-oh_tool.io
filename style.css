@@ -1,17 +1,20 @@
 table{
     border: solid black 1px;
     border-collapse: collapse;
+    width: 100%;
+    height: auto;
 }
 
 td{
     border: solid black 1px;
+    text-align: justify;
 }
 
-
-@media (min-width:1025px) {
-    table{
-        width: 100%;
-        height: auto;
-    }
+th{
+    border: solid black 1px;
 }
-@media (min-width:1281px) {}
+
+input {
+    text-align: right;
+    width: calc(100% - 10px);
+}
