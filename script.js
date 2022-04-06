@@ -4,6 +4,9 @@ prev_hand_count = 0;
 
 $(function() {
   // initializing
+  $("#deck_count").val(40);
+  $("#target_count").val(1);
+  $("#hand_count").val(5);
   adjust_max();
   calculate();
   
@@ -13,13 +16,9 @@ $(function() {
     adjust_max();
   });
   
-  $("#target_count").change(function(){
-    calculate(); 
-  });
+  $("#target_count").change(calculate);
   
-  $("#hand_count").change(function(){
-    calculate(); 
-  });
+  $("#hand_count").change(calculate);
 });
 
 function is_out_of_bound(element){
@@ -27,17 +26,26 @@ function is_out_of_bound(element){
     var max = parseInt(element.attr("max"));
     var val = parseInt(element.val());
     
-    console.log("x < " + max);
-    console.log("x = " + val);
-    console.log(max < val);
+    var less_than_min = val < min;
+    var more_than_max = max < val;
    
-    return val < min || max < val;
+    return less_than_min || more_than_max;
+}
+
+function adjust_max(){
+  $("#target_count").attr({
+    "max" : $("#deck_count").val()  
+  });
+  
+  $("#hand_count").attr({
+    "max" : $("#deck_count").val()  
+  });
 }
 
 function calculate(){
-  var deck_count = $("#deck_count").val();
-  var target_count = $("#target_count").val();
-  var hand_count = $("#hand_count").val();
+  var deck_count = parseInt($("#deck_count").val());
+  var target_count = parseInt($("#target_count").val());
+  var hand_count = parseInt($("#hand_count").val());
   
   if(is_out_of_bound($("#deck_count"))){
     $("#deck_count").val(prev_deck_count);
@@ -84,12 +92,3 @@ function calculate(){
   $("#result").html(result);
 }
 
-function adjust_max(){
-  $("#target_count").attr({
-    "max" : $("#deck_count").val()  
-  });
-  
-  $("#hand_count").attr({
-    "max" : $("#deck_count").val()  
-  });
-}
