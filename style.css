@@ -1,20 +1,23 @@
 table{
     border: solid black 1px;
     border-collapse: collapse;
-    width: 100%;
+    width: 600px;
     height: auto;
 }
 
+th{
+    width: 30%;
+    border: solid black 1px;
+}
+
 td{
+    width: 70%;
     border: solid black 1px;
     text-align: justify;
 }
 
-th{
-    border: solid black 1px;
-}
+
 
 input {
     text-align: right;
-    width: calc(100% - 10px);
 }
