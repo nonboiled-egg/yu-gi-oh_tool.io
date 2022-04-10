@@ -5,17 +5,19 @@
   <meta charset="utf-8">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.1.1/math.min.js"></script>
-  <script type="text/javascript" src="script.js" ></script>
+  <script type="text/javascript" src="script.js" charset="utf-8" ></script>
   <link rel="stylesheet" href="style.css">
   
 </head>
 
 <body>
+  <button id='yugioh'>Yu-Gi-Oh</button>
+  <button id='pokemon'>Pokémon</button>
   <table>
     <tbody>
       
       <tr>
-        <th>初動札</th>
+        <th id='row1_header'>初動札</th>
         <td><input id='target_count' type='number' inputmode="numeric" pattern="[0-9]*" min='1' value='1'/></td>
       </tr>
       
@@ -35,6 +37,5 @@
       </tr>
     </tbody>
   </table>
-  <button id='yugioh'>Yu-Gi-Oh</button>
-  <button id='pokemon'>Pokémon</button>
+  <footer>&copy; 2021-2022 nonboiled</footer>
 </body>

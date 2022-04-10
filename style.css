@@ -1,8 +1,7 @@
 table{
     border: solid black 1px;
     border-collapse: collapse;
-    width: 600px;
-    height: auto;
+    width: 100%;
 }
 
 th{
@@ -20,4 +19,9 @@ td{
 
 input {
     text-align: right;
+}
+
+footer{
+    position:absolute;
+    bottom:0;
 }

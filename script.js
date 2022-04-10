@@ -20,8 +20,14 @@ $(function() {
   });
 
 
-  $("#yugioh").click(function() {set_values(1,5,40,$("#target_count")); });
-  $("#pokemon").click(function() {set_values(1,7,60,$("#target_count")); });
+  $("#yugioh").click(function() {
+    set_values(1,5,40,$("#target_count"));
+    setFieldsForYGO();
+  });
+  $("#pokemon").click(function() {
+    set_values(1,7,60,$("#target_count"));
+    setFieldsForPCG();
+  });
   
   
 });
@@ -111,4 +117,40 @@ function set_values(t,h,d,element){
   calculate();
 }
 
+function setFieldsForPCG(){
+  $("#row1_header").html('たね');
+  $("#hand_count").attr({
+    'readonly': true   
+  });
+  $("#hand_count").css({
+    'background-color': 'LightSlateGray',
+    'color': 'LightGray'
+  });
+  
+  $("#deck_count").attr({
+    'readonly': true
+  });
+  $("#deck_count").css({
+    'background-color': 'LightSlateGray',
+    'color': 'LightGray'
+  });
+}
 
+function setFieldsForYGO(){
+  $("#row1_header").html('初動札');
+  $("#hand_count").attr({
+    'readonly': false
+  });
+  $("#hand_count").css({
+    'background-color': 'white',
+    'color': 'black'
+  });
+  
+  $("#deck_count").attr({
+    'readonly': false
+  });
+  $("#deck_count").css({
+    'background-color': 'white',
+    'color': 'black'
+  });
+}
